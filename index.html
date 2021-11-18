@@ -45,6 +45,7 @@
         <button type="button" onclick("deleteZoom()")> Detener Zoom </button>
         <button type="button" onclick("ableZoom()")> Desbloquear Zoom </button>
         <script>
+          var model = document.getElementById('transform');
           function deleteZoom() {
              model.camera-controls = 'disable zoom';
           }
