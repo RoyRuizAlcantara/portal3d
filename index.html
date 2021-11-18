@@ -43,21 +43,27 @@
     <!--</button>-->
      
         <ul style="list-style: none;">
-          <li><button type="button" onclick("Zoom()")> Detener Zoom </button></li>
-          <li><button type="button" onclick("ableZoom()")> Desbloquear Zoom </button></li></ul>
+          <li><button type="button" id="btn_delzoom" onclick("deleteZoom()")> Detener Zoom </button></li>
+          <li><button type="button" id="btn_zoom" onclick("ableZoom()")> Desbloquear Zoom </button></li></ul>
         
         
                  
         </model-viewer>
   
   <script>
+        var btn_delzoom = document.querySelector("#btn_delzoom");
+        btn_delzoom.addEventListener("click"), function(delzoom){
+          var model = document.getElementById('transform');
+          model.camera-controls = 'disable zoom';
+        }
+        
           var model = document.getElementById('transform');
           function deleteZoom() {
              model.camera-controls = 'disable zoom';
             console.log("zoom bloqueado");
           }
           function ableZoom() {
-             model.camera-controls = 'able zoom';
+             model.camera-controls;
             console.log("zoom desbloqueado");
           }
 </script>
