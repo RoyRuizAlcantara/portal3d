@@ -21,7 +21,7 @@
                   ios-src="./Vento Rocketman.usdz"
 
                   id="transform"
-                 ar ar-scale="fixed"
+                  ar ar-scale="fixed"
                   camera-controls disable-zoom
                   ar ar-placement="floor" 
                   auto-rotate ar>
@@ -42,9 +42,19 @@
       <li><button type="button" onclick="switchSrc(this,'Vento Rocketman')"> <img src="593192.PNG" height ="48" width="60" /></button></li></ul>   
     <!--</button>-->
      
-        <button type="button"> Zoom </button>
+        <button type="button"> onclick="Zoom();" Zoom </button>
+        
                  
         </model-viewer>
+  
+  <script>
+    var model = document.getElementById('transform');
+    function Zoom(){
+    camera-controls disable-zoom
+    }
+  </script>
+  
+  
   <script>
 const modelViewerTransform = document.querySelector("model-viewer#transform");
 const x = document.querySelector('#x');
