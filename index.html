@@ -42,8 +42,9 @@
       <li><button type="button" onclick="switchSrc(this,'Vento Rocketman')"> <img src="593192.PNG" height ="48" width="60" /></button></li></ul>   
     <!--</button>-->
      
-        <button type="button" onclick("deleteZoom()")> Detener Zoom </button>
-        <button type="button" onclick("ableZoom()")> Desbloquear Zoom </button>
+        <ul style="list-style: none;">
+          <li><button type="button" onclick("deleteZoom()")> Detener Zoom </button></li>
+          <li><button type="button" onclick("ableZoom()")> Desbloquear Zoom </button></li></ul>
         
         
                  
@@ -53,9 +54,11 @@
           var model = document.getElementById('transform');
           function deleteZoom() {
              model.camera-controls = 'disable zoom';
+            console.log("zoom bloqueado");
           }
           function ableZoom() {
              model.camera-controls = 'able zoom';
+            console.log("zoom desbloqueado");
           }
 </script>
   
