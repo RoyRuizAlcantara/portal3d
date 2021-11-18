@@ -42,7 +42,16 @@
       <li><button type="button" onclick="switchSrc(this,'Vento Rocketman')"> <img src="593192.PNG" height ="48" width="60" /></button></li></ul>   
     <!--</button>-->
      
-        <button type="button" onclick="Zoom()"> Zoom </button>
+        <button type="button" onclick("deleteZoom()")> Detener Zoom </button>
+        <button type="button" onclick("ableZoom()")> Desbloquear Zoom </button>
+        <script>
+          function deleteZoom() {
+             model.camera-controls = 'disable zoom';
+          }
+          function ableZoom() {
+             model.camera-controls = 'able zoom';
+          }
+        </script>
         
                  
         </model-viewer>
