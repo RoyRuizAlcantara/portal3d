@@ -51,9 +51,10 @@
         </model-viewer>
   
   <script>
-        var btn_delzoom = document.querySelector("#btn_delzoom");
-        btn_delzoom.addEventListener("click"), function(delzoom){
-          var model = document.getElementById('transform');
+        var btn_delzoom = document.querySelector('#btn_delzoom');
+        btn_delzoom.addEventListener('click'), function(delzoom){
+          console.log('zoom quitado');
+          var model = document.querySelector('#transform');
           model.camera-controls = 'disable zoom';
         }
         
