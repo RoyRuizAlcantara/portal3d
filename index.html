@@ -11,39 +11,6 @@
 
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
-  <style>input[id^="spoiler"]{
-display: none;
-}
-/* Estilo botón clicable */
-input[id^="spoiler"] + label {
-display: block;
-width: 200px;
-margin: 0 auto;
-padding-left: 5px 20px;
-background: #e1a;
-cursor: pointer;
-  float: left;
-}
-/* Estilo botón cuando su INPUT está seleccionado */
-input[id^="spoiler"]:checked + label {
-color: #333;
-background: #ccc;
-}
-/* Estilo caja SPOILER (inicialmente oculto) */
-input[id^="spoiler"] ~ .spoiler {
-width: 70%;
-height: 0;
-overflow: hidden;
-opacity: 0;
-  float: left;
-}
-/* Estilo caja SPOILER cuando su INPUT está seleccionado */
-input[id^="spoiler"]:checked + label + .spoiler{
-height: auto;
-opacity: 1;
-  text-alignt: left;
-}</style>
-  
 <body>
 
 
@@ -54,7 +21,7 @@ opacity: 1;
                   ios-src="./Vento Rocketman.usdz"
 
                   id="transform"
-                  ar ar-scale="fixed"
+                 ar ar-scale="fixed"
                   camera-controls disable-zoom
                   ar ar-placement="floor" 
                   auto-rotate ar>
@@ -68,54 +35,24 @@ opacity: 1;
     <button id="frame"> </button>
   </div>
 -->
-       
-    <ul style="list-style: none;">
-      <li><button type="button" onclick="switchSrc(this,'moto1')"> <img src="518915.PNG" height ="48" width="60" /></button></li>
-      <li><button type="button" onclick="switchSrc(this,'moto1')"> <img src="513468.PNG" height ="48" width="60" /></button></li>
-      <li><button type="button" onclick="switchSrc(this,'Vento Rocketman')"> <img src="593192.PNG" height ="48" width="60" /></button></li></ul>
-        
-        <h3>asd</h3>
-    <!--</button>-->
-     
-        <ul style="list-style: none;">
-          <li><button type="button" id="btn_delzoom" onclick("deleteZoom()")> Detener Zoom </button></li>
-          <li><button type="button" id="btn_zoom" onclick("ableZoom()")> Desbloquear Zoom </button></li></ul>
-        
-        <input type="checkbox" id="spoiler1"></input>
-        <label for="spoiler1">SPOILER</label>
-        <div class="spoiler">CONTENIDO OCULTO</div>
-                 
+       <div class="slider">
+    <div class="slides">
+      <!--
+      <button class="slide selected" onclick="switchSrc(this, '518915')" style="background-image: url('518915.PNG');">
+
+      </button><button class="slide" onclick="switchSrc(this, '513468')" style="background-image: url('513468.PNG');">
+
+      </button><button class="slide" onclick="switchSrc(this, '593192')" style="background-image: url('593192.PNG');">
+      -->    
+
+      <button type="button" onclick="switchSrc(this,'moto1')"> <img src="518915.PNG" height ="48" width="60" /></button>
+      <button type="button" onclick="switchSrc(this,'moto1')"> <img src="513468.PNG" height ="48" width="60" /></button>
+      <button type="button" onclick="switchSrc(this,'Vento Rocketman')"> <img src="593192.PNG" height ="48" width="60" /></button>
+    </button>
+               
+         </div>
+  </div>             
         </model-viewer>
-  
-  <script>
-        var btn_delzoom = document.querySelector('#btn_delzoom');
-        btn_delzoom.addEventListener('click'), function(delzoom){
-          console.log('zoom quitado');
-          var model = document.querySelector('#transform');
-          model.camera-controls = 'disable zoom';
-        }
-        
-          var model = document.getElementById('transform');
-          function deleteZoom() {
-             model.camera-controls = 'disable zoom';
-            console.log("zoom bloqueado");
-          }
-          function ableZoom() {
-             model.camera-controls;
-            console.log("zoom desbloqueado");
-          }
-</script>
-  
-  <script>
-    var model = document.getElementById('transform');
-    console.log("zoom bloqueado");
-    function zoom(){
-    model.camera-controls = 'disable zoom';
-      console.log("zoom bloqueado");
-    }
-  </script>
-  
-  
   <script>
 const modelViewerTransform = document.querySelector("model-viewer#transform");
 const x = document.querySelector('#x');
