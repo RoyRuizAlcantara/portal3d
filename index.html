@@ -90,7 +90,7 @@
     <button id="frame"> </button>
   </div>
 -->
-      <div class="ventana">
+      <div class="ventana" id="vent">
           <h4>VENTO</h4>
           <p>Cilindrada: 250cc</p>
           <p>Velocidad máxima: 120 km/h</p>
@@ -107,7 +107,7 @@
             <ul><button type="button" onclick="switchSrc(this,'moto1')"> <img src="513468.PNG" height ="48" width="60" /></button></ul>
             <ul><button type="button" onclick="switchSrc(this,'Vento Rocketman')"> <img src="593192.PNG" height ="48" width="60" /></button></ul>
             <ul><button class="button button1" onClick="window.location.reload();">Refresh page</button></ul>
-            <ul><a href="#"> Caracteristicas </a></ul>
+            <ul><a href="javascript:abrir()"> Caracteristicas </a></ul>
         </li>
       </div>
                
@@ -131,6 +131,14 @@
     
     
 </div>
+  
+  <script>
+    function abrir(){
+      document.getElementById("vent").style.display="block";
+    }
+  </script>
+    
+    
   <script>
 const modelViewerTransform = document.querySelector("model-viewer#transform");
 const x = document.querySelector('#x');
