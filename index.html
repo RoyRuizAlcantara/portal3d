@@ -52,6 +52,12 @@
      top:25%;
      display:none;
    }
+   
+   #cerrar{
+     position:absolute;
+     right:3px;
+     top:1px;
+   }
 </style>
     
      
@@ -91,6 +97,7 @@
   </div>
 -->
       <div class="ventana" id="vent">
+        <div id="cerrar"> <a href="javascript:cerrar()"><img src="cruz.png"></a> </div>
           <h4>VENTO</h4>
           <p>Cilindrada: 250cc</p>
           <p>Velocidad máxima: 120 km/h</p>
@@ -135,6 +142,9 @@
   <script>
     function abrir(){
       document.getElementById("vent").style.display="block";
+    }
+    function cerrar(){
+      document.getElementById("vent").style.display="none";
     }
   </script>
     
